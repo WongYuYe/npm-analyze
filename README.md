@@ -1,3 +1,7 @@
-#### 分析npm所占实际本地空间大小
+#### 分析 某个 npm 所占本地空间实际大小
 
-[链接](https://wangzaixst.com/npm)
+#### 原理
+
+分析本地文件结构，计算大小及依赖数
+
+[测试链接](https://wangzaixst.com/npm)

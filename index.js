@@ -1,8 +1,7 @@
-
 const Koa = require('koa')
-const app = new Koa();
+const app = new Koa()
 
-const fetch = require('node-fetch')['default']
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
 
 const lib = require('./lib')
 
@@ -11,6 +10,7 @@ app.use(async ctx => {
   if (ctx.request.url == '/') {
     ctx.body = `<div style='width: 600px; margin: 0 auto; margin-top: 80px'>
       <h1>NPM包下载大小查询</h1>
+      <h4>输入个包名</h4>
       <form method="GET" action="/search" id="form">
         <input name="q" value="" style='width: 200px; height: 60px' /><br/>
         <button type="submit" style='margin-top: 20px; width: 100px; height: 40px; font-size: 16px'>查询</button>
@@ -70,10 +70,10 @@ app.use(async ctx => {
     } catch (error) {
       console.log(error)
     }
-  } else if(ctx.request.url.indexOf('/result') > -1) {
+  } else if (ctx.request.url.indexOf('/result') > -1) {
     ctx.body = '你最帅'
   }
 });
 
-app.listen(3005);
-
+app.listen(3011);
+console.info(`server is running at 3011`)

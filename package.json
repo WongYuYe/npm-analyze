@@ -14,10 +14,10 @@
   "author": "wyuye_",
   "license": "ISC",
   "dependencies": {
-    "fs-extra": "2.1.0",
-    "koa": "^2.13.1",
-    "node-fetch": "^2.6.1",
-    "sync-exec": "0.6.2"
+    "fs-extra": "^10.1.0",
+    "koa": "^2.13.4",
+    "node-fetch": "^3.2.6",
+    "sync-exec": "^0.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.13.8",
